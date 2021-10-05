@@ -1,19 +1,19 @@
-import sys, os
+import os
 os.chdir(sys._MEIPASS) #this line for the pyinstaller to make onfile with data
 
 import sys, webbrowser
-from PyQt5.QtWidgets import QHeaderView, QMessageBox, QPushButton, QWidget
-from PyQt5.QtWidgets import QGridLayout, QVBoxLayout, QHBoxLayout, QFormLayout
+from PyQt5.QtWidgets import QHeaderView, QPushButton, QWidget
+from PyQt5.QtWidgets import QGridLayout, QVBoxLayout, QHBoxLayout
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QGridLayout
 from PyQt5.QtWidgets import QLineEdit
 from PyQt5.QtWidgets import QComboBox
 from PyQt5.QtWidgets import QProgressBar
-from PyQt5.QtWidgets import QTableView
 from PyQt5.QtGui import QIcon, QStandardItem
 from PyQt5.QtGui import QStandardItemModel
 from PyQt5.QtCore import QSortFilterProxyModel, Qt, pyqtSignal
 from PyQt5.QtCore import QThread
+from MyWidgets import MyTable
 import urlTester
 
 
@@ -58,7 +58,7 @@ class MyApp(QWidget):
         self.entry.setPlaceholderText("Search your link")
         self.mainLayout.addWidget(self.entry)
 
-        self.table = QTableView()
+        self.table = MyTable()
         self.mainLayout.addWidget(self.table)
 
         self.model = QStandardItemModel()                               # creating model for tableView
