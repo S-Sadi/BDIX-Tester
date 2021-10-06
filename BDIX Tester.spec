@@ -7,10 +7,9 @@ block_cipher = None
 a = Analysis(['main.py'],
              pathex=['E:\\python\\Brawser\\src'],
              binaries=[],
-             datas=[('Files/icon.ico', 'Files'), ('Files/international_servers', 'Files'), ('Files/ftp_servers', 'Files'), ('Files/tv_servers', 'Files'), ('Files/torrent_servers', 'Files')],
+             datas=[('./MyWidgets.py', '.'), ('Files/icon.ico', 'Files'), ('Files/international_servers', 'Files'), ('Files/ftp_servers', 'Files'), ('Files/tv_servers', 'Files'), ('Files/torrent_servers', 'Files')],
              hiddenimports=[],
              hookspath=[],
-             hooksconfig={},
              runtime_hooks=[],
              excludes=[],
              win_no_prefer_redirects=False,
@@ -37,4 +36,4 @@ exe = EXE(pyz,
           disable_windowed_traceback=False,
           target_arch=None,
           codesign_identity=None,
-          entitlements_file=None , icon='icon.ico')
+          entitlements_file=None , icon='Files/icon.ico')
